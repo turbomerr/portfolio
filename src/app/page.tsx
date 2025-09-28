@@ -319,7 +319,7 @@ export default function Page() {
                     <br className="hidden md:block" /> building modern web experiences
                   </motion.h1>
                   <motion.p className="mt-4 max-w-prose text-muted-foreground" variants={fadeInUp}>
-                    I craft clear, accessible interfaces and a solid back end. I build scalable, dependable APIs with secure authentication and well-structured data, turning real problems into fast, delightful products.
+                    Front to back, I turn real problems into fast, trustworthy web apps. I turn ideas into production-ready web products: clear UI, secure data, zero drama.
                   </motion.p>
                   <motion.div className="mt-6 flex flex-wrap items-center gap-3" variants={fadeInUp}>
                     <Button onClick={() => scrollTo("projects")}>
@@ -366,10 +366,10 @@ export default function Page() {
                 </motion.div>
                 <motion.div className="md:col-span-2 max-w-prose leading-relaxed space-y-4 text-muted-foreground" variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.3 }}>
                   <motion.p variants={fadeInUp}>
-                    From interface to database, I build the whole path—usable UIs, secure endpoints, and truthful data—optimized for clarity, performance, and long-term maintainability.
+                   From interface to database, I build the whole path—usable UIs, secure endpoints, and truthful data—optimized for clarity, performance, and long-term maintainability.
                   </motion.p>
                   <motion.p variants={fadeInUp}>
-                   I’m an enthusiastic full-stack developer with 2+ years of hands-on experience crafting high-performance websites that deliver exceptional speed and user experiences.
+                  I’m an enthusiastic full-stack developer with 2+ years of hands-on experience crafting high-performance websites that deliver exceptional speed and user experiences.
                   </motion.p>
                 </motion.div>
               </div>
