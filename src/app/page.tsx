@@ -143,7 +143,6 @@ function Section(
 const nav = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
-  { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills" },
   { id: "contact", label: "Contact" },
@@ -152,25 +151,6 @@ const nav = [
 const socials = [
   { href: "https://github.com/turbomerr", icon: Github, label: "GitHub" },
   { href: "https://www.linkedin.com/in/%C3%B6mer-g%C3%B6kbakar-1043a7235/", icon: Linkedin, label: "LinkedIn" },
-] as const;
-
-const experiences = [
-  {
-    role: "Full-Stack Developer",
-    company: "Acme Co.",
-    period: "2023 — Present",
-    desc:
-      "Building scalable web apps with Next.js, TypeScript and serverless. Led performance optimizations (TTFB ↓38%).",
-    tech: ["Next.js", "TypeScript", "PostgreSQL", "AWS"],
-  },
-  {
-    role: "Backend Developer",
-    company: "Startup XYZ",
-    period: "2021 — 2023",
-    desc:
-      "Designed REST/GraphQL APIs, improved CI/CD and observability, reduced error rate by 25% via robust input validation.",
-    tech: ["Node.js", "Express", "MongoDB", "Docker"],
-  },
 ] as const;
 
 const projects = [
@@ -220,7 +200,7 @@ function DevChecks() {
   useEffect(() => {
     if (process.env.NODE_ENV !== "development") return;
 
-    const ids = ["home", "about", "experience", "projects", "skills", "contact"];
+    const ids = ["home", "about", "projects", "skills", "contact"];
     ids.forEach((id) => {
       console.assert(!!document.getElementById(id), `❌ Missing section #${id}`);
     });
@@ -386,18 +366,19 @@ export default function Page() {
                 </motion.div>
                 <motion.div className="md:col-span-2 max-w-prose leading-relaxed space-y-4 text-muted-foreground" variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.3 }}>
                   <motion.p variants={fadeInUp}>
-                    From interface to database, I build the whole path: usable UIs, secure endpoints, and data that tells the truth. I optimize for clarity, performance, and long-term maintainability.
+                    From interface to database, I build the whole path—usable UIs, secure endpoints, and truthful data—optimized for clarity, performance, and long-term maintainability.
                   </motion.p>
                   <motion.p variants={fadeInUp}>
-                    From interface to database, I own the path: usable UIs, secure endpoints, and honest data models. Curious self-learner who digs deep and keeps improving.
+                   I’m an enthusiastic full-stack developer with 2+ years of hands-on experience crafting high-performance websites that deliver exceptional speed and user experiences.
                   </motion.p>
                 </motion.div>
               </div>
             </Section>
+            
 
             <Separator />
 
-            <Section id="experience" focusKey={focusKey} className="py-16">
+            {/* <Section id="experience" focusKey={focusKey} className="py-16">
               <div className="mb-8 flex items-center gap-2">
                 <Briefcase className="h-6 w-6" />
                 <h2 className="text-2xl font-semibold">Experience</h2>
@@ -422,7 +403,7 @@ export default function Page() {
                   </motion.div>
                 ))}
               </div>
-            </Section>
+            </Section> */}
 
             <Separator />
 
