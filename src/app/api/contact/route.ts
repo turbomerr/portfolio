@@ -101,7 +101,7 @@ export async function POST(req: Request) {
 
     //resend mail integration
     const res = await resend.emails.send({
-      from: `${fromName} <${fromEmail}>`, // from : user user@gmail.com
+      from: fromName,// from : user user@gmail.com
       to: toEmail,                        // my personal email address
       subject: `New message from ${name}`, // title of the mail
       html: contactEmailHtml({ name, email, message, fromName }),
