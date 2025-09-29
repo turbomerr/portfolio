@@ -9,14 +9,12 @@ import ContactSection from "@/components/ContactSection";
 import {
   Github,
   Linkedin,
-  Mail,
   ArrowRight,
   ExternalLink,
   Download,
   Sun,
   Moon,
   Code2,
-  Briefcase,
   Sparkles,
 } from "lucide-react";
 
@@ -24,8 +22,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -33,7 +30,7 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
 
 type Theme = "light" | "dark";
 
@@ -240,7 +237,7 @@ export default function Page() {
     setFocusKey(id);
   };
 
-  
+
 
   return (
     <LocalThemeProvider>
@@ -332,9 +329,9 @@ export default function Page() {
                       {/* <a href="/OmerGokbakarCV.pdf" download="OmerGokbakarCV.pdf">
                         Download CV <Download className="ml-2 h-4 w-4" />
                       </a> */}
-                       <a href="/" >
+                      <Link href="/">
                         Download CV <Download className="ml-2 h-4 w-4" />
-                      </a>
+                      </Link>
                     </Button>
                     <div className="ml-1 flex items-center gap-2">
                       {socials.map((s) => (
@@ -481,7 +478,7 @@ export default function Page() {
               <h2 className="mb-6 text-2xl font-semibold">Contact</h2>
               <div className="grid gap-8 md:grid-cols-2">
                 <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }}>
-                  <ContactSection/>
+                  <ContactSection />
                 </motion.div>
 
 

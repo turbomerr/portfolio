@@ -10,15 +10,6 @@ import { Button } from "@/components/ui/button";
 
 type Status = "idle" | "ok" | "error";
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 24 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
-  },
-};
-
 export default function ContactSection() {
   const [sending, setSending] = React.useState(false);
   const [status, setStatus] = React.useState<Status>("idle");

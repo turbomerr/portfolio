@@ -110,9 +110,11 @@ export async function POST(req: Request) {
 
     if (res.error) throw res.error
     return NextResponse.json({ ok: true });
-  } catch (e: any) {
+  } catch (e: unknown) {
     const msg =
-    process.env.NODE_ENV === "development" ? String(e?.message || e) : "Failed to send";
+     process.env.NODE_ENV === "development"
+        ? (e instanceof Error ? e.message : String(e))
+        : "Failed to send";
     return NextResponse.json({ error: msg }, { status: 500 });
   }
 }
