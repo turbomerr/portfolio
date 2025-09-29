@@ -329,7 +329,10 @@ export default function Page() {
                       View Projects <ExternalLink className="ml-2 h-4 w-4" />
                     </Button>
                     <Button variant="outline" asChild>
-                      <a href="/OmerGokbakarCV.pdf" download="OmerGokbakarCV.pdf">
+                      {/* <a href="/OmerGokbakarCV.pdf" download="OmerGokbakarCV.pdf">
+                        Download CV <Download className="ml-2 h-4 w-4" />
+                      </a> */}
+                       <a href="/" >
                         Download CV <Download className="ml-2 h-4 w-4" />
                       </a>
                     </Button>
