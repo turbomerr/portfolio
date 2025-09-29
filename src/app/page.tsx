@@ -5,6 +5,7 @@ import { Icon } from '@iconify/react'
 import "@/lib/icons";
 import Link from "next/link";
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import ContactSection from "@/components/ContactSection";
 import {
   Github,
   Linkedin,
@@ -47,14 +48,14 @@ function LocalThemeProvider({ children }: { children: React.ReactNode }) {
       const stored = (localStorage.getItem("theme") as Theme | null) ?? null;
       const systemDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches ?? false;
       setThemeState(stored === "light" || stored === "dark" ? stored : systemDark ? "dark" : "light");
-    } catch {}
+    } catch { }
   }, []);
 
   useEffect(() => {
     const root = document.documentElement;
     if (theme === "dark") root.classList.add("dark");
     else root.classList.remove("dark");
-    try { localStorage.setItem("theme", theme); } catch {}
+    try { localStorage.setItem("theme", theme); } catch { }
   }, [theme]);
 
   const setTheme = (t: Theme) => setThemeState(t);
@@ -239,6 +240,8 @@ export default function Page() {
     setFocusKey(id);
   };
 
+  
+
   return (
     <LocalThemeProvider>
       <DevChecks />
@@ -366,15 +369,15 @@ export default function Page() {
                 </motion.div>
                 <motion.div className="md:col-span-2 max-w-prose leading-relaxed space-y-4 text-muted-foreground" variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.3 }}>
                   <motion.p variants={fadeInUp}>
-                   From interface to database, I build the whole path—usable UIs, secure endpoints, and truthful data—optimized for clarity, performance, and long-term maintainability.
+                    From interface to database, I build the whole path—usable UIs, secure endpoints, and truthful data—optimized for clarity, performance, and long-term maintainability.
                   </motion.p>
                   <motion.p variants={fadeInUp}>
-                  I’m an enthusiastic full-stack developer with 2+ years of hands-on experience crafting high-performance websites that deliver exceptional speed and user experiences.
+                    I’m an enthusiastic full-stack developer with 2+ years of hands-on experience crafting high-performance websites that deliver exceptional speed and user experiences.
                   </motion.p>
                 </motion.div>
               </div>
             </Section>
-            
+
 
             <Separator />
 
@@ -475,30 +478,9 @@ export default function Page() {
               <h2 className="mb-6 text-2xl font-semibold">Contact</h2>
               <div className="grid gap-8 md:grid-cols-2">
                 <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }}>
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>Send a message</CardTitle>
-                      <CardDescription>I usually reply within 24 hours.</CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <div>
-                        <label className="mb-1 block text-sm font-medium">Name</label>
-                        <Input placeholder="Your name" required />
-                      </div>
-                      <div>
-                        <label className="mb-1 block text-sm font-medium">Email</label>
-                        <Input type="email" placeholder="you@example.com" required />
-                      </div>
-                      <div>
-                        <label className="mb-1 block text-sm font-medium">Message</label>
-                        <Textarea placeholder="How can I help?" className="min-h-[120px]" />
-                      </div>
-                      <Button>
-                        Send <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </CardContent>
-                  </Card>
+                  <ContactSection/>
                 </motion.div>
+
 
                 <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }}>
                   <Card>
