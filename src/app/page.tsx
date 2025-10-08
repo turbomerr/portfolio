@@ -177,6 +177,13 @@ const projects = [
     tags: ["React", "ChakraUI", "Node.js", "Express", "MongoDB"],
     links: [{ href: "https://github.com/turbomerr/StoreProduct", label: "Code" }],
   },
+  {
+    title: "Job Bew",
+    description:
+      "Job Posting Website — A modern web application built with Next.js (TypeScript) for managing and displaying job listings. The project uses Prisma for database management, Tailwind CSS and shadcn/ui for a consistent, reusable, and responsive UI design. It’s structured for scalability and production readiness with proper configuration and developer tooling.",
+    tags: ["Next.js", "Prisma", "Tailwind", "PostgreSQL"],
+    links: [{ href: "https://github.com/turbomerr/job-posting-website", label: "Code" }],
+  },
 ] as const;
 
 const skills = [
