@@ -529,7 +529,7 @@ export default function Page() {
 
           <footer className="border-t py-10 text-sm">
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 md:flex-row">
-              <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+              <p>© {new Date().getFullYear()} Turbomerr. All rights reserved.</p>
               <Button variant="outline" size="sm" onClick={() => scrollTo("home")}>Back to top</Button>
             </div>
           </footer>
