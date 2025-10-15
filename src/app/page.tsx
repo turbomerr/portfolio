@@ -161,6 +161,14 @@ const projects = [
     ],
   },
   {
+  title: "Chat App Server",
+  description: "The Chat App Server is a Node.js and Express-based backend application that powers a real-time chat platform. It handles user authentication, message management, and database operations, ensuring fast and secure communication between users. Built with scalability and maintainability in mind, it serves as the foundation for a modern chat application.",
+  tags: ["Node.js", "Express", "MongoDB"],
+  links: [
+    { href: "https://github.com/turbomerr/chat-app-server", label: "Code" },
+  ],
+},
+  {
     title: "PostgreSQL Store",
     description:
       "A simple store app showcasing CRUD operations on PostgreSQL, built with Node.js/Express and Prisma, and deployed on Render. The goal is to practice relational schema design, migrations, and production deployment.",
