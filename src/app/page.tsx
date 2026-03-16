@@ -341,13 +341,10 @@ export default function Page() {
                       View Projects <ExternalLink className="ml-2 h-4 w-4" />
                     </Button>
                     <Button variant="outline" asChild>
-                      { <a href="/Omer-Gokbakar-CV.pdf" download="Omer-Gokbakar-CV.pdf">
-                        Download CV <Download className="ml-2 h-4 w-4" />
-                      </a> }
-                      <Link href="/">
-                        Download CV <Download className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
+  <a href="/Omer-Gokbakar-CV.pdf" download>
+    Download CV <Download className="ml-2 h-4 w-4" />
+  </a>
+</Button>
                     <div className="ml-1 flex items-center gap-2">
                       {socials.map((s) => (
                         <Button key={s.label} variant="outline" size="icon" aria-label={s.label} data-testid={`social-${s.label.toLowerCase()}`} asChild>
